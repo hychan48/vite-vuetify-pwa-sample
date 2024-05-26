@@ -1,19 +1,23 @@
 {
   "name": "vite-vuetify-pwa-sample",
-  "author":"hychan48",
-  "private":true,
-  "version": "0.0.0",
+  "author": "hychan48",
+  "private": true,
+  "version": "0.0.3",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "dev:host": "vite --host",
     "test": "vitest test/",
     "build": "vite build",
-    "gh-pages-cli-push": "gh-pages --dotfiles --no-history --nojekyll -d dist",
     "gh-pages-push": "node ./.github/gh-pages-push.js",
+    "gh-pages-cli-push": "gh-pages --dotfiles --no-history --nojekyll -d dist",
     "gh-pages-clean": "gh-pages-clean",
     "preview": "vite preview",
-    "lint": "eslint . --fix --ignore-path .gitignore"
+    "lint": "eslint . --fix --ignore-path .gitignore",
+    "release-it": "yarn version --patch && git push --follow-tags",
+    "yarn-patch": "yarn version --patch",
+    "yarn-minor": "yarn version --minor",
+    "yarn-major": "yarn version --major"
   },
   "dependencies": {
     "@mdi/font": "7.0.96",
