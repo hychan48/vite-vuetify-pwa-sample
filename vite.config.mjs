@@ -15,7 +15,7 @@ import { fileURLToPath, URL } from 'node:url'
 // https://vitejs.dev/config/
 export default defineConfig({
   // base:import.meta.env.VITE_BASE_URL,
-  base:/vite-vuetify-pwa-sample/,
+  base: "/vite-vuetify-pwa-sample/",
   plugins: [
     VueRouter(),
     Layouts(),
