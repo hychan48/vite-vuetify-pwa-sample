@@ -13,7 +13,7 @@ const tmp = await new Promise(resolve => {
   }, function(err) {
     if(err){
       console.error('publish error',err);
-      resolve(false);
+      resolve(err);
     }else{
       console.log('Pushed');
       resolve(true);
