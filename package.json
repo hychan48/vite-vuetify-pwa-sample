@@ -9,7 +9,7 @@
     "dev:host": "vite --host",
     "test": "vitest test/",
     "build": "vite build",
-    "gh-pages-cli-push": "gh-pages -d dist --dotfiles --no-history --nojekyll",
+    "gh-pages-cli-push": "gh-pages --dotfiles --no-history --nojekyll -d dist",
     "gh-pages-push": "node ./.github/gh-pages-push.js",
     "gh-pages-clean": "gh-pages-clean",
     "preview": "vite preview",

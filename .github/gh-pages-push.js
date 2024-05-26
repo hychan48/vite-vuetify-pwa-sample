@@ -10,6 +10,14 @@ const tmp = await new Promise(resolve => {
     dotfiles: true,
     nojekyll: true,
     history: false
-  }, resolve());
+  }, function(err) {
+    if(err){
+      console.error('publish error',err);
+      resolve(false);
+    }else{
+      console.log('Pushed');
+      resolve(true);
+    }
+  });
 });
 console.log(tmp);
