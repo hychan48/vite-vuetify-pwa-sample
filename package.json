@@ -12,6 +12,7 @@
     "preview": "vite preview",
     "gh-pages-push": "node ./.github/gh-pages-push.js",
     "gh-pages-cli-push": "gh-pages --dotfiles --no-history --nojekyll -d dist",
+    "gh-pages-cli-push:history": "gh-pages --dotfiles --nojekyll -d dist",
     "gh-pages-clean": "gh-pages-clean",
     "lint": "eslint . --fix --ignore-path .gitignore",
     "release-it": "yarn version --patch && git push --follow-tags",

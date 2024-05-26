@@ -75,6 +75,7 @@ pnpm add vue-test-utils -D
   * [ ] ogImage
     * [check ghpage opengraph]( https://www.opengraph.xyz/url/https%3A%2F%2Fhychan48.github.io%2Fvite-vuetify-pwa-sample )
       * https://www.opengraph.xyz/url/https%3A%2F%2Fhychan48.github.io%2Fvite-vuetify-pwa-sample
+      * Recommended: 1200x630px
 * [ ] manifest in vite.config.js
   * [ ] Check icons / assets
   * [ ] Theme
@@ -82,11 +83,15 @@ pnpm add vue-test-utils -D
 * [ ] robots.txt
 * [ ] sw refresh
 * [ ] validate using og checker
-  * https://www.opengraph.xyz/
-    * [check ghpage opengraph]( https://www.opengraph.xyz/url/https%3A%2F%2Fhychan48.github.io%2Fvite-vuetify-pwa-sample )
-      * https://www.opengraph.xyz/url/https%3A%2F%2Fhychan48.github.io%2Fvite-vuetify-pwa-sample
-* https://github.com/nolebase/integrations
-  * Other tools
+  * Recommended: 1200x630px
+    * https://www.opengraph.xyz/
+      * [check ghpage opengraph]( https://www.opengraph.xyz/url/https%3A%2F%2Fhychan48.github.io%2Fvite-vuetify-pwa-sample )
+        * https://www.opengraph.xyz/url/https%3A%2F%2Fhychan48.github.io%2Fvite-vuetify-pwa-sample
+* Other tools
+  * https://github.com/nolebase/integrations
+  * Telegram Checker
+    * https://stackoverflow.com/questions/65825729/image-from-open-graph-is-not-appearing-in-telegram-viber
+    * https://telegram.me/webpagebot
 ```bash
 pnpm add -D @vite-pwa/assets-generator
 # svg recommended
