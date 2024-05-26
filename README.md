@@ -17,6 +17,7 @@ echo "/dist/" >> .gitignore
 mv README.md readme.vuetify.md
 touch README.md
 ```
+* [ ] fix editorconfig
 * [ ] modify index.html
   * For Title
 * [ ] [ ] Setup env
@@ -183,5 +184,29 @@ yarn version --minor
 yarn version --major
 git tag -l
 git tag | xargs git tag -d
+
+```
+
+## Editor Config
+```editorconfig
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.py]
+indent_style = space
+indent_size = 4
+[*.{js,jsx,ts,tsx,vue}]
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true
+insert_final_newline = true
 
 ```
