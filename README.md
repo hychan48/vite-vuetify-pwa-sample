@@ -21,6 +21,9 @@ touch README.md
 * [ ] modify index.html
   * For Title
 * [ ] [ ] Setup env
+* [ ] Fix licence
+* [ ] add descriptions, etc.
+* [ ] Check mobile... reactive
 ```bash 
 # 
 # add to package.json
