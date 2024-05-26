@@ -73,6 +73,8 @@ pnpm add vue-test-utils -D
 * [assets-generator](https://vite-pwa-org.netlify.app/assets-generator/)
 * [ ] image/icons/metadata
   * [ ] ogImage
+    * [check ghpage opengraph]( https://www.opengraph.xyz/url/https%3A%2F%2Fhychan48.github.io%2Fvite-vuetify-pwa-sample )
+      * https://www.opengraph.xyz/url/https%3A%2F%2Fhychan48.github.io%2Fvite-vuetify-pwa-sample
 * [ ] manifest in vite.config.js
   * [ ] Check icons / assets
   * [ ] Theme
@@ -80,9 +82,11 @@ pnpm add vue-test-utils -D
 * [ ] robots.txt
 * [ ] sw refresh
 * [ ] validate using og checker
-* https://www.opengraph.xyz/
-* [check ghpage opengraph]( https://www.opengraph.xyz/url/https%3A%2F%2Fhychan48.github.io%2Fvite-vuetify-pwa-sample )
-* https://www.opengraph.xyz/url/https%3A%2F%2Fhychan48.github.io%2Fvite-vuetify-pwa-sample
+  * https://www.opengraph.xyz/
+    * [check ghpage opengraph]( https://www.opengraph.xyz/url/https%3A%2F%2Fhychan48.github.io%2Fvite-vuetify-pwa-sample )
+      * https://www.opengraph.xyz/url/https%3A%2F%2Fhychan48.github.io%2Fvite-vuetify-pwa-sample
+* https://github.com/nolebase/integrations
+  * Other tools
 ```bash
 pnpm add -D @vite-pwa/assets-generator
 # svg recommended
