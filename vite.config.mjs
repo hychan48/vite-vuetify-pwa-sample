@@ -60,9 +60,9 @@ export default defineConfig({
       //Check file names:
       includeAssets: ['favicon.ico', 'favicon.svg', 'apple-touch-icon-180x180.png', 'maskable-icon-512x512.png'],
       manifest: {
-        name: 'My Awesome App',
-        short_name: 'MyApp',
-        description: 'My Awesome App description',
+        name: 'Vite Vuetify 3',
+        short_name: 'vite-vuetify-pwa-sample',
+        description: 'Vuetify Vite PWA Sample',
         theme_color: '#121212',//for dark theme
         //https://m2.material.io/design/color/dark-theme.html#properties
         icons: [
