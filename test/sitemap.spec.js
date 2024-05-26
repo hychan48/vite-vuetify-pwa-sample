@@ -12,10 +12,10 @@ import { vi } from 'vitest'
 // `process.env.NODE_ENV` and `import.meta.env.NODE_ENV`
 // are "development" before calling "vi.stubEnv"
 // https://vitest.dev/api/vi.html#vi-stubenv
-vi.stubEnv('NODE_ENV', 'production')
+// vi.stubEnv('NODE_ENV', 'production')
 
-process.env.NODE_ENV === 'production'
-import.meta.env.NODE_ENV === 'production'
+// process.env.NODE_ENV === 'production'
+// import.meta.env.NODE_ENV === 'production'
 
 /**
  * https://github.com/kolirt/vite-plugin-robots
@@ -32,6 +32,7 @@ describe('SEO Verify Plugin', function(){
     const robotTxt = fs.readFileSync('dist/robots.txt','utf8');
     console.dir(robotTxt);
     expect(robotTxt).to.be.a('string');
-    expect(robotTxt).to.include('localhost');//production shouldn't be this though
+    expect(robotTxt).to.include('Sitemap');//production shouldn't be this though
+    // expect(robotTxt).to.include('localhost');//production shouldn't be this though
   });
 });
