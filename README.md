@@ -140,7 +140,8 @@ export default defineConfig({
         name: 'My Awesome App',
         short_name: 'MyApp',
         description: 'My Awesome App description',
-        theme_color: '#121212',//for dark theme
+        theme_color: '#121212',//for dark theme, also color-schema
+          //theme-color:     <meta name="theme-color" content="#121212">
         //https://m2.material.io/design/color/dark-theme.html#properties
         icons: [
           {
