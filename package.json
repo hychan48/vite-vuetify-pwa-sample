@@ -1,8 +1,13 @@
 {
   "name": "vite-vuetify-pwa-sample",
+    "author":"hychan48",
+  "private":true,
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
+    "dev:host": "vite --host",
+    "test": "vitest test/",
+    "gh-pages-deploy": "gh-pages --dotfiles --dist dist",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix --ignore-path .gitignore"

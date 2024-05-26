@@ -9,10 +9,13 @@ import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 
 // Utilities
 import { defineConfig } from 'vite'
+
 import { fileURLToPath, URL } from 'node:url'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  // base:import.meta.env.VITE_BASE_URL,
+  base:/vite-vuetify-pwa-sample/,
   plugins: [
     VueRouter(),
     Layouts(),
@@ -41,7 +44,7 @@ export default defineConfig({
         'vue-router',
       ],
       eslintrc: {
-        enabled: true,
+        enabled: false,
       },
       vueTemplate: true,
     }),
