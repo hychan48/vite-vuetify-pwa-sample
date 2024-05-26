@@ -3,12 +3,15 @@
   "author":"hychan48",
   "private":true,
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "dev:host": "vite --host",
     "test": "vitest test/",
     "build": "vite build",
-    "gh-pages-deploy": "gh-pages --dotfiles --dist dist",
+    "gh-pages-cli-push": "gh-pages -d dist --dotfiles --no-history --nojekyll",
+    "gh-pages-push": "node ./.github/gh-pages-push.js",
+    "gh-pages-clean": "gh-pages-clean",
     "preview": "vite preview",
     "lint": "eslint . --fix --ignore-path .gitignore"
   },
