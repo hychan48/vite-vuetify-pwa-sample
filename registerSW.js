@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/vite-vuetify-pwa-sample/sw.js', { scope: '/vite-vuetify-pwa-sample/' })})}
