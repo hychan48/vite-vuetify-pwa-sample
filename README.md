@@ -1,5 +1,6 @@
 ## Vuetify
-* vuetify
+* [Repo](https://github.com/hychan48/vite-vuetify-pwa-sample)
+* [Pages](https://github.com/hychan48/vite-vuetify-pwa-sample)
 ```bash
 pnpm create vuetify
 D:\dev_drive_git_repos\github\vite-vuetify-pwa-sample
