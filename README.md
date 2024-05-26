@@ -68,6 +68,37 @@ pnpm add vue-test-utils -D
 ```
 * [ ] GitHub Actions
 ### pwa
-* https://vite-plugin-pwa.netlify.app/
+* [vite-plugin-pwa](https://vite-plugin-pwa.netlify.app/)
+* [assets-generator](https://vite-pwa-org.netlify.app/assets-generator/)
 ```bash
+pnpm add -D @vite-pwa/assets-generator
+# svg recommended
+#pwa-assets-generator --preset minimal-2023 public/logo.svg
+pwa-assets-generator --preset minimal-2023 src/assets/logo.svg
+```
+
+# auto version
+* https://github.com/semantic-release/semantic-release/tree/e424297f2f97b712e83203c91d12220e9b4cae9f
+## yarn
+* lazy way
+```jsonc
+script:{
+  "release-it": "yarn version --patch && git push --follow-tags",
+  "yarn-patch": "yarn version --patch",
+  "yarn-minor": "yarn version --minor",
+  "yarn-major": "yarn version --major",
+
+}
+//doesn't work on windows nvm
+
+```
+```bash
+# should work using git bash on windows
+yarn run release-it
+yarn version --patch
+yarn version --minor
+yarn version --major
+git tag -l
+git tag | xargs git tag -d
+
 ```

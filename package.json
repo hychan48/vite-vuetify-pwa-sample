@@ -9,15 +9,16 @@
     "dev:host": "vite --host",
     "test": "vitest test/",
     "build": "vite build",
+    "preview": "vite preview",
     "gh-pages-push": "node ./.github/gh-pages-push.js",
     "gh-pages-cli-push": "gh-pages --dotfiles --no-history --nojekyll -d dist",
     "gh-pages-clean": "gh-pages-clean",
-    "preview": "vite preview",
     "lint": "eslint . --fix --ignore-path .gitignore",
     "release-it": "yarn version --patch && git push --follow-tags",
     "yarn-patch": "yarn version --patch",
     "yarn-minor": "yarn version --minor",
-    "yarn-major": "yarn version --major"
+    "yarn-major": "yarn version --major",
+    "generate:pwa": "pwa-assets-generator --preset minimal-2023 public/logo.svg"
   },
   "dependencies": {
     "@mdi/font": "7.0.96",
@@ -27,6 +28,7 @@
     "vuetify": "^3.5.0"
   },
   "devDependencies": {
+    "@vite-pwa/assets-generator": "^0.2.4",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vue/test-utils": "^2.4.6",
     "eslint": "^8.57.0",
