@@ -17,10 +17,16 @@ echo "/dist/" >> .gitignore
 mv README.md readme.vuetify.md
 touch README.md
 ```
+## Vuetify CheckList
 * [ ] fix editorconfig
 * [ ] modify index.html
   * For Title
 * [ ] [ ] Setup env
+* [ ] Fix licence
+* [ ] add descriptions, etc.
+* [ ] Check mobile... reactive
+  * https://automate.browserstack.com/dashboard/v2/getting-started
+  * https://www.browserstack.com/docs/automate/puppeteer
 ```bash 
 # 
 # add to package.json
@@ -68,7 +74,7 @@ pnpm add vue-test-utils -D
 }
 ```
 * [ ] GitHub Actions
-### pwa
+### PWA Checklist
 * [vite-plugin-pwa](https://vite-plugin-pwa.netlify.app/)
 * [assets-generator](https://vite-pwa-org.netlify.app/assets-generator/)
 * [ ] image/icons/metadata
@@ -104,6 +110,7 @@ scripts:{
 }
 ```
 ```html
+* note don't use .svg for ogImage. maskable names were changed
 <!-- vite pwa generated -->
 <head>
   <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -133,7 +140,8 @@ export default defineConfig({
         name: 'My Awesome App',
         short_name: 'MyApp',
         description: 'My Awesome App description',
-        theme_color: '#121212',//for dark theme
+        theme_color: '#121212',//for dark theme, also color-schema
+          //theme-color:     <meta name="theme-color" content="#121212">
         //https://m2.material.io/design/color/dark-theme.html#properties
         icons: [
           {
@@ -217,5 +225,45 @@ indent_style = space
 indent_size = 2
 trim_trailing_whitespace = true
 insert_final_newline = true
+
+```
+## SEO
+* https://github.com/jbaubree/vite-plugin-sitemap
+* https://github.com/kolirt/vite-plugin-robots
+```bash
+pnpm add vite-plugin-robots vite-plugin-sitemap -D
+# generate sitemap first
+# robot is straight forward
+```
+### SiteMap
+```js
+// generates the sitemap.xml in dist/ abd smoke tested by:
+// test/sitemap.spec.js
+const plugins = [
+    Sitemap({
+
+    
+    }),
+]
+```
+### Robot
+* https://developers.google.com/search/docs/crawling-indexing/robots/create-robots-txt
+* https://github.com/kolirt/vite-plugin-robots
+* doesn't work... seems kinda pointless if it only copies from .robots.txt.production
+```bash
+echo "User-agent: *" > .robots.production.txt
+echo "Allow: /" >> .robots.production.txt
+echo "SiteMap: https://hychan48.github.io/vite-vuetify-pwa-sample/sitemap.xml" >> .robots.production.txt
+
+```
+```js
+const plugins = [
+    robots({
+        UserAgent: '*',
+        Allow: '/',
+        Sitemap: 'https://hychan48.github.io/vite-vuetify-pwa-sample/sitemap.xml',
+    }),
+]
+// can have disallow
 
 ```

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+SiteMap: https://hychan48.github.io/vite-vuetify-pwa-sample/sitemap.xml

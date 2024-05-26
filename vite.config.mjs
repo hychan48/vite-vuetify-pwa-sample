@@ -7,6 +7,10 @@ import Vue from '@vitejs/plugin-vue'
 import VueRouter from 'unplugin-vue-router/vite'
 import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 import { VitePWA } from 'vite-plugin-pwa'
+import Sitemap from 'vite-plugin-sitemap'
+import { robots } from 'vite-plugin-robots'
+
+
 // Utilities
 import { defineConfig } from 'vite'
 
@@ -84,6 +88,14 @@ export default defineConfig({
         ]
       }
     }),//vite-plugin-pwa
+    Sitemap({
+
+    }),
+    robots({
+      UserAgent: '*',
+      Allow: '/',
+      Sitemap: 'https://hychan48.github.io/vite-vuetify-pwa-sample/sitemap.xml',
+    }),
   ],
   define: { 'process.env': {} },
   resolve: {
