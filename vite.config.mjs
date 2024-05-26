@@ -6,7 +6,7 @@ import Layouts from 'vite-plugin-vue-layouts'
 import Vue from '@vitejs/plugin-vue'
 import VueRouter from 'unplugin-vue-router/vite'
 import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
-
+import { VitePWA } from 'vite-plugin-pwa'
 // Utilities
 import { defineConfig } from 'vite'
 
@@ -20,7 +20,7 @@ export default defineConfig({
     VueRouter(),
     Layouts(),
     Vue({
-      template: { transformAssetUrls }
+      template: {transformAssetUrls}
     }),
     // https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin#readme
     Vuetify({
@@ -48,6 +48,42 @@ export default defineConfig({
       },
       vueTemplate: true,
     }),
+    VitePWA({
+      registerType: 'autoUpdate',
+      devOptions: {
+        // enabled: true,//check in dev
+        enabled: false,
+      },
+      workbox: {
+        sourcemap: true
+      },
+      //Check file names:
+      includeAssets: ['favicon.ico', 'favicon.svg', 'apple-touch-icon-180x180.png', 'maskable-icon-512x512.png'],
+      manifest: {
+        name: 'My Awesome App',
+        short_name: 'MyApp',
+        description: 'My Awesome App description',
+        theme_color: '#121212',//for dark theme
+        //https://m2.material.io/design/color/dark-theme.html#properties
+        icons: [
+          {
+            src: 'pwa-64x64.png',
+            sizes: '64x64',
+            type: 'image/png'
+          },
+          {
+            src: 'pwa-192x192.png',
+            sizes: '192x192',
+            type: 'image/png'
+          },
+          {
+            src: 'pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png'
+          }
+        ]
+      }
+    }),//vite-plugin-pwa
   ],
   define: { 'process.env': {} },
   resolve: {
@@ -64,6 +100,7 @@ export default defineConfig({
       '.vue',
     ],
   },
+
   server: {
     port: 3000,
   },
